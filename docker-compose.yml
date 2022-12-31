@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build:
+      # docker buildを実行するカレントディレクトリ
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - "8080:8080"
